@@ -55,12 +55,17 @@ HLFB:23,45,12
 - `-1` indicates no signal detected for a motor.
 - The number of values matches the configured motor count (`MCT`).
 
-## Example
+## Settings Example
 ```
 MCT:3
 ADJ:86.5,87.0,85.0
 DELAY:1000
 START
+```
+
+# Output Example
+```
+HLFB:17,-1,-1
 ```
 
 ## File Structure
