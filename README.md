@@ -4,7 +4,7 @@ This project is an Arduino-based tool for monitoring the High Level Feedback (HL
 I will be using the output in my main DRO running on Arduino Due to display load meters on the display.
 Because the HLFB runs on 5 volts and Due is 3.3 I decided to use this solution.
 I couldn't get a level shifter to read the PWM directly from HLFB.
-I still still need a level shifter but I am senting over UART. 
+I still still need a level shifter but I am sending over UART. 
 
 ## Features
 - Monitors HLFB signals from up to 4 ClearPath motors (pins 9–12)
