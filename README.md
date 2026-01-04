@@ -1,6 +1,10 @@
 # ClearPath Servo HLFB Monitor
 
 This project is an Arduino-based tool for monitoring the High Level Feedback (HLFB) signals from up to four ClearPath servo motors. It is designed to run on an Adafruit Pro Trinket 5V (ATmega328) or compatible board, using the PlatformIO build system.
+I will be using the output in my main DRO running on Arduino Due to display load meters on the display.
+Because the HLFB runs on 5 volts and Due is 3.3 I decided to use this solution.
+I couldn't get a level shifter to read the PWM directly from HLFB.
+I still still need a level shifter but I am senting over UART. 
 
 ## Features
 - Monitors HLFB signals from up to 4 ClearPath motors (pins 9–12)
