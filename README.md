@@ -14,7 +14,6 @@ This is what I had on hand. [text](https://www.adafruit.com/product/757)
 - Configurable parameters via serial commands:
   - Motor count (1–4)
   - Per-motor adjustment factors
-  - Monitoring delay interval
   - Pulse-in timeout
 - Serial command interface for configuration and help
 - Status indication via onboard LED and external pin
@@ -39,11 +38,22 @@ This is what I had on hand. [text](https://www.adafruit.com/product/757)
 3. **Available serial commands:**
    - `MCT:<value>` — Set motor count (1–4)
    - `ADJ:<v1>[,<v2>,<v3>,<v4>]` — Set adjustment factors (floats, comma-separated)
-   - `DELAY:<value>` — Set delay time in ms
    - `TIMEOUT:<value>` — Set pulseIn timeout in µs
    - `START` — Start HLFB monitoring
    - `STOP` — Stop HLFB monitoring
    - `HELP` — Show help message
+
+## Output Format
+
+When monitoring is active, the device outputs the load for each motor as a comma-separated list on a single line, prefixed by `HLFB:`. For example:
+
+```
+HLFB:23,45,12
+```
+
+- Each value represents the load percentage for a motor (0–100).
+- `-1` indicates no signal detected for a motor.
+- The number of values matches the configured motor count (`MCT`).
 
 ## Example
 ```
