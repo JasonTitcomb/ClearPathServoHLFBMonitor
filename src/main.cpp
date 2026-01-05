@@ -40,7 +40,7 @@ void setup()
   delay(10);
   pinMode(8, OUTPUT); // Control pin for an external component
   delay(10);
-  digitalWrite(8, HIGH); // Set pin 8 HIGH to enable the component
+  digitalWrite(8, LOW); // Set pin 8 LOW to enable the component
   reportHelp();
 }
 
@@ -178,11 +178,11 @@ void loop()
 
   if (motorFailure)
   {
-    digitalWrite(8, HIGH); // Set pin 8 HIGH to indicate motor failure
+    digitalWrite(8, LOW); // Set pin 8 LOW to indicate motor failure
     motorFailure = false;  // Reset flag after reporting
   }
   else
   {
-    digitalWrite(8, LOW); // Set pin 8 LOW if no motor failure
+    digitalWrite(8, HIGH); // Set pin 8 HIGH to indicate no motor failure
   }
 }
