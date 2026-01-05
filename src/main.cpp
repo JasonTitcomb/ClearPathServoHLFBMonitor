@@ -48,8 +48,8 @@ void checkMotors(int pin)
 {
   // Read the duration of the LOW pulse (since HLFB pulls to GND when active)
 
-  unsigned long activeTime = pulseInLong(pin, LOW, pulseInTimeout);
-  unsigned long inactiveTime = pulseInLong(pin, HIGH, pulseInTimeout);
+  unsigned long activeTime = pulseIn(pin, LOW, pulseInTimeout);
+  unsigned long inactiveTime = pulseIn(pin, HIGH, pulseInTimeout);
 
   if (activeTime + inactiveTime > 0)
   {
